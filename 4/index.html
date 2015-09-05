@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>BROWSER INFO</title>
+
+<script type="text/javascript">
+function change(){
+            var d=document.getElementById('demo')
+	        var userAg = navigator.userAgent;
+
+	        if (userAg.indexOf("Chrome") != -1) {
+	            document.write("Google Chrome <br><br>");
+	        } else if (userAg.indexOf("Firefox")!=-1) {
+	            document.write("Mozilla Firefox <br><br>");
+	        } else if (userAg.indexOf("Opera")!=-1) {
+	            document.write("Opera <br>");
+	        } else if (userAg.indexOf("MSIE")!=-1) {
+	            document.write("Internet Explorer <br><br>");
+	        } else if (userAg.indexOf("Safari")!=-1) {
+	            document.write("Safari <br><br>");
+	        } else {
+	            document.write("unknown browser <br><br>");
+	        }
+	        document.write("Browser Version is :" + navigator.appVersion+ "<br><br>");
+	        document.write(navigator.appName + "<br><br>");
+	        document.write(navigator.appCodeName + "<br><br>");
+	        document.write(navigator.platform + "<br><br>");
+}
+	    </script>
+</head>
+<body>
+<p id="demo">
+
+</p>
+
+<Button onclick=change()>KNOW</button>
+
+
+
+</body>
+</html>
