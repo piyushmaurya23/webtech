@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+ <head>
+ 	<title>Student Form</title>
+ 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ 	<script type="text/javascript">
+ 	function ValidateStudentForm()
+ 	{
+ 		var s_name = document.StudentForm.s_name;
+ 		var branch = document.StudentForm.branch;
+ 		var semester = document.StudentForm.semester;
+ 		var f_name = document.StudentForm.f_name;
+ 		var email = document.StudentForm.email;
+ 		if (s_name.value == "")
+ 		{
+ 			window.alert("Please enter your name.");
+ 			s_name.focus();
+ 			return false;
+ 		}
+ 		if (branch.selectedIndex < 1)
+ 		{
+ 			alert("Please enter your branch.");
+ 			branch.focus();
+ 			return false;
+ 		}
+ 		if (semester.selectedIndex < 1)
+ 		{
+ 			alert("Please enter your semester.");
+ 			semester.focus();
+ 			return false;
+ 		}
+ 		if (f_name.value == "")
+ 		{
+ 			window.alert("Please enter your father's name.");
+ 			f_name.focus();
+ 			return false;
+ 		}
+ 		if (email.value == "")
+ 		{
+ 			window.alert("Please enter a valid e-mail address.");
+ 			email.focus();
+ 			return false;
+ 		}
+ 		if (email.value.indexOf("@", 0) < 0)
+ 		{
+ 			window.alert("Please enter a valid e-mail address.");
+ 			email.focus();
+ 			return false;
+ 		}
+ 		if (email.value.indexOf(".", 0) < 0)
+ 		{
+ 			window.alert("Please enter a valid e-mail address.");
+ 			email.focus();
+ 			return false;
+ 		}
+ 	}
+ 	</script>
+ </head>
+ <body>
+ 	<div class="panel" style="color:black;background-color:#66CCFF">
+ 		<h2><center>STUDENT FORM</center></h2>
+ 	</div>
+ 	<br>
+ 	<div class="col-sm-offset-4 col-sm-10">
+ 	<form method="post" action="mailto:fahadmohdshahid@gmail.com"  name="StudentForm" onsubmit="return ValidateStudentForm();">
+ 		<p>
+ 			<b>NAME:</b> <input type="text" size="30" name="s_name" placeholder="NAME"><br><br>
+ 		</p>
+ 		<p>
+ 			<b>BRANCH:</b> 
+ 			<select type="text" name="branch" value=""><br><br>
+ 				<option>CIVIL ENGINEERING</option>
+ 			    <option>COMPUTER SCIENCE</option>
+ 			    <option>ELECTRICAL ENGINEERING</option>
+ 			    <option>ELECTRICAL AND ELECTRONICS</option>
+ 			    <option>ELECTRNICS AND COMMUNICATION</option>
+ 			    <option>ELECTRONICS AND INSTRUMENTATION</option>
+ 			    <option>INFORMATION TECHNOLOGY</option>
+ 			    <option>INSTRUMENTATION AND CONTROL</option>
+ 			    <option>MECHANICAL ENGINEERING</option>
+ 		    </select>
+ 	    </p>
+ 	    <p>
+ 	    	<b>SEMESTER:</b>
+ 	    	<select type="text" name="semester"><br><br>
+ 	    		<option>1</option>
+ 	    		<option>2</option>
+ 	    		<option>3</option>
+ 	    		<option>4</option>
+ 	    		<option>5</option>
+ 	    		<option>6</option>
+ 	    		<option>7</option>
+ 	    		<option>8</option>
+ 	    	</select>
+ 	    </p>
+ 	    <p>
+ 	    	<b>FATHER'S NAME:</b> <input type="text" size="30" name="f_name" placeholder="FATHER'S NAME"><br><br>
+ 	    </p>
+ 	    <p>
+ 	    	<b>EMAIL ADDRESS:</b> <input type="text" size="30" name="email" placeholder="EMAIL ADDRESS"><br><br> 
+ 	    </p>
+ 	    <p>
+ 	    	<button type="submit" class="btn btn-primary">Save</button>
+ 	    	<button type="reset" class="btn btn-primary">Reset</button>
+ 	    </p>
+ 	</form>
+ </div>
+ </body>
